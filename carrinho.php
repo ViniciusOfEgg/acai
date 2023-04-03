@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrinho de Compras</title>
     <script src="assets/scripts/script.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="carrinho/css/style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
