@@ -1,0 +1,107 @@
+@import url('https://unpkg.com/css.gg@2.0.0/icons/css/shopping-cart.css');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+
+/* HEADER */
+
+.header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height:50px;
+    background: linear-gradient(111.6deg, rgb(174, 68, 223) 27.3%, rgb(246, 135, 135) 112.7%);
+}
+.header-content {
+    width: 100%;
+    display: flex ;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+}
+.header-content ul li {
+    list-style:none;
+}   
+
+/* MENU PRINCIPAL */
+
+.menu li a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+.menu li a:hover{
+    color: white;
+    transition: 500ms;
+    -webkit-transition: 500ms;
+    -moz-transition: 500ms;
+    -ms-transition: 500ms;
+    -o-transition: 500ms;
+    font-size: 20px;
+}
+.menu { 
+    gap: 4%;
+    display: flex;
+    text-align: center;
+}
+
+/* PERSONALIZANDO A LOGO */
+
+.logo{
+    color:rgb(176, 0, 176);
+}
+.logo span{
+    color: rgb(0, 255, 0);
+}
+
+
+/* MENU BAR */
+
+.menu-burguer {
+    display: none;
+    margin-right: 10%;
+}
+
+
+/* MEDIA QUERY DO MENU RESPONSIVO */
+
+@media (max-width: 470px) {
+    .menu{
+        display: none;
+    }
+    .menu-burguer{
+        display: block;
+    }
+}
+/* APLICANDO A RESPOSIVIDADE */
+
+@media (min-width:250px) and (max-width: 425px) {
+    .menu li a {
+        font-size: 1rem;
+        flex-direction: column;
+    }
+    .logo {
+        font-size: 1.5rem;
+        flex-direction: column;
+    }
+    .header{
+        height: 5%;
+    }
+    .menu {
+        flex-wrap: wrap;
+        flex-direction: column;
+        ;
+
+    }
+}
+
+@media (max-width:249px){
+    .logo {
+        font-size: 1.45rem;
+        flex-direction: column;
+    }
+    .header {
+        height: 10%;
+        margin: 10%x;
+    }
+}

@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background-image: linear-gradient( right purple, green);
+}
+
+/* Cores de fundo */
+.background1 {
+    width:100%;
+    background-image: linear-gradient(to right, rgba(128, 0, 128, 0.861),rgb(107, 36, 107), rgb(31, 31, 202));
+    
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    text-align: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+.list-itens {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    text-align: center;
+    margin: auto;
+}
+
+.list-itens h1 {
+    display: flex;
+    justify-content: center;
+
+    padding: 5% 0 2% 0;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    font-size: 38px;
+    color: rgb(255, 255, 255);
+}
+
+.item img {
+    border-radius: 10px;
+}
+
+.itens {
+    padding: 1%;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Caixa inteira do produto */
+.item {
+    text-align: left;
+    width: 100%;
+    padding: 2%;
+    font-size: 18px;
+    margin: 10px 0 10px 0;
+    background-color: rgba(176, 110, 215, 0.911);
+    border-radius: 10px;
+}
+
+/* Ao passar o mouse por cima, faz uma coisa */
+.item:hover {
+    box-shadow: 0 0 20px rgb(255, 0, 255);
+    transition: 500ms;
+    -webkit-transition: 500ms;
+    -moz-transition: 500ms;
+    -ms-transition: 500ms;
+    -o-transition: 500ms;
+}
+
+/* Div de preços */
+.preco {
+    color: rgb(253, 46, 46);
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Botões de adicionar */
+.buttons {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+}
+
+.buttons button {
+    display: inline-block;
+    width: auto;
+    font-size: 16px;
+    padding: 5px;
+    background-color: rgb(1, 203, 1);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    color: white;
+}
+
+.buttons button:hover {
+    transition: 500ms;
+    background-color: rgb(189, 0, 189);
+    -webkit-transition: 500ms;
+    -moz-transition: 500ms;
+    -ms-transition: 500ms;
+    -o-transition: 500ms;
+}
+
+@media (min-width:250px) and (max-width:425px) {
+    .list-itens h1 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width:249px) {
+    .list-itens h1 {
+        font-size: 20px;
+;
+    }
+
+}

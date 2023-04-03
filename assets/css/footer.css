@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+.footer {
+    height: 5rem;
+    width: 100%;
+    background-image: linear-gradient(315deg, #ec91af 0%, #b0f3f1 74%);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.content {
+    text-align: center;
+    align-items: center;
+}
+
+p {
+    padding-left: 2rem;
+}
+
+@media (max-width:425px) {
+    h1{
+        font-size: 4%;
+    }
+    .img-footer {  
+        width: 7%;
+    }
+    .content {
+        text-align: center;
+    }
+    p {
+        font-size: 90%;
+        display: inline-flex;
+    }
+}
