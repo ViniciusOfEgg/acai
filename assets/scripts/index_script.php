@@ -33,10 +33,10 @@
      }
 
      if(isset($_GET['adicionar'])){
-        $idProduto = (int) $_GET['adicionar'];
+        $idProduto = $_GET['adicionar'];
         if(isset($items[$idProduto])){
             if(isset($_SESSION['carrinho'][$idProduto])){
-                $_SESSION['carrinho'][$idProduto]['quantidade'];
+                $_SESSION['carrinho'][$idProduto]['quantidade']++;
             }else{
                 $_SESSION['carrinho'][$idProduto] = array('quantidade'=>1,'nome'=>$items[$idProduto]['nome'],'preco'=>$items[$idProduto]['preco'],'imagem'=>$items[$idProduto]['imagem'],'descricao'=>$items[$idProduto]['descricao']);
             }

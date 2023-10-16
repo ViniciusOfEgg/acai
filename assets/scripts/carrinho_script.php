@@ -18,15 +18,15 @@
                     <td>R$ <?php echo $value['preco'];?></td>
                     <td>
                         <div class="qty">
-                            <button>-</button>
+                            <button type="submit" name="diminuir" value="<?php echo $key?>">-</button>
                             <span><?php echo $value['quantidade'];?></span>
-                            <button>+</button>
+                            <button type="submit" name="add" value="<?php echo $key?>">+</button>
                         </div>
 
                     </td>
                     <td>R$ <?php echo $total;?></td>
                     <td>
-                        <a href="?remover=<?php echo $key?>"><button class="remove"><i class='bx bx-x'></i></button></a>
+                        <button type='submit' name='remover' value='<?php echo $key;?>' class="remove"><i class='bx bx-x'></i></button>
                     </td>
                     </tr>
             
@@ -42,6 +42,26 @@
         if(isset($_SESSION['carrinho'][$idProduto])){
             if(isset($_SESSION['carrinho'][$idProduto])){
                 unset($_SESSION['carrinho'][$idProduto]);
+            }
+            echo '<script>window.location.href = "carrinho.php"</script>';
+        }
+    }
+
+    if(isset($_GET['add'])){
+        $idProduto = (int) $_GET['add'];
+        if(isset($_SESSION['carrinho'][$idProduto])){
+                $_SESSION['carrinho'][$idProduto]['quantidade']++;
+        }
+            echo '<script>window.location.href = "carrinho.php"</script>';
+        }
+
+    if(isset($_GET['diminuir'])){
+        $idProduto = (int) $_GET['diminuir'];
+        if(isset($_SESSION['carrinho'][$idProduto])){
+            if($_SESSION['carrinho'][$idProduto]['quantidade'] <= 1){
+                unset($_SESSION['carrinho'][$idProduto]);
+            } else {
+                $_SESSION['carrinho'][$idProduto]['quantidade']--;
             }
             echo '<script>window.location.href = "carrinho.php"</script>';
         }
